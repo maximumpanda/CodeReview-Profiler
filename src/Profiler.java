@@ -3,7 +3,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Profiler {
     public void Profile(Object baseClass, Method testMethod, Object[] parameters, int iterations) throws Exception {
-        if (parameters == null) parameters = new Object[]{};
         long startTime = System.nanoTime();
         for (int i = 0; i < iterations; i++) {
             testMethod.invoke(baseClass, parameters);
